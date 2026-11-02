@@ -1,0 +1,84 @@
+import requests
+
+# 2. zadatak:
+
+url = 'http://192.168.0.252'
+url_login = 'http://192.168.0.252/login' 
+
+"""response = requests.get(url)
+
+#print(response.text)
+#print(response.status_code)
+
+for k, v in response.headers.items():
+    print(f' {k}: {v}')
+
+print()
+
+response = requests.get('http://192.168.0.252/login')
+
+print(response.text)
+print(response.status_code)
+
+for k, v in response.headers.items():
+    print(f' {k}: {v}')
+"""
+
+# 3. zadatak
+
+"""ispravni_podatci = {
+    'username' : 'PURS',
+    'password' : '1234'
+}
+
+response = requests.post(url_login, json=ispravni_podatci)
+
+print(response.text)
+print(response.status_code)"""
+
+"""neispravni_podatci = {
+    'username' : 'PURS',
+    'password' : 1234
+}
+
+response = requests.post(url_login, json=neispravni_podatci)
+
+print(response.text)
+print(response.status_code)"""
+
+# 4. zadatak:
+
+"""response = requests.get('http://192.168.0.252/temperatura')
+
+if response.headers.get('Content-Type') == 'application/json':
+    print(response.json().get('temperatura'))"""
+
+# 5. zadatak
+
+"""podatci = {
+    'temperatura' : 24
+}
+
+response = requests.post('http://192.168.0.252/temperatura', json=podatci)
+
+print(response.status_code)
+print(response.text)"""
+
+# 6. zadatak
+
+"""payload = {
+    'id' : 45
+}
+
+response = requests.delete('http://192.168.0.252/temperatura', params=payload)
+
+print(response.status_code)
+print(response.text)"""
+
+# 7. zadatak
+
+"""response = requests.get('https://api.ipify.org/?format=json')
+
+print(response.json())
+print(response.text)
+print(response.json().get('ip'))"""
