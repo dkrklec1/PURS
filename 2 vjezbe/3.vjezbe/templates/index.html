@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Domagoj">
+    <meta name="description" content="Ovo je početna stranica našeg IoT i API poslužitelja.">
+    <title>Početna stranica</title>
+</head>
+<body>
+    <main>
+        <header>
+            <p>Username</p>
+            <img src="{{ url_for('static', filename='images/page_logo.png') }}" width="70px">
+            <img src="{{ url_for('static', filename='images/user-icon.png') }}" width="70px">
+        </header>
+
+        <!-- Dodani semantički element nav s trima poveznicama -->
+        <nav>
+            <ul>
+                <li><a href="/logout">Logut</a></li>
+                <li><a href="/?id=1">Temperatura</a></li>
+                <li><a href="/?id=2">Vlaga</a></li>
+            </ul>
+        </nav>
+
+        <h1>Dobrodošli na Početnu stranicu</h1>
+        <p>
+            Ovo je službena početna stranica poslužitelja
+            za upravljanje senzorima i prijavu korisnika.
+        </p>
+    </main>
+</body>
+</html>
+

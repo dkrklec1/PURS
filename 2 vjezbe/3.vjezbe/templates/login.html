@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Domagoj">
+    <meta name="description" content="Stranica za prijavu u sustav.">
+    <title>Prijava u sustav</title>
+</head>
+<body>
+    <main>
+        <h1>Prijava u sustav</h1>
+        <p>Molimo unesite vaše podatke za prijavu.</p>
+
+        <!-- Forma koja šalje podatke POST metodom na /login rutu -->
+        <form action="/login" method="POST">
+            <label for="username">Korisničko ime:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="lozinka">Lozinka:</label><br>
+            <input type="password" id="lozinka" name="password" required><br><br>
+
+            <button type="submit">Prijava</button>
+        </form>
+    </main>
+</body>
+</html>
