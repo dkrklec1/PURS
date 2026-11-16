@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ime i prezime">
+    <meta name="description" content="Početna stranica laboratorijske vježbe iz kolegija PURS.">
+
+    <title>Početna stranica</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=7">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <div class="left-side">
+                <p class="username">Username</p>
+
+                <img src="{{ url_for('static', filename='images/user-icon.png') }}"
+                     alt="Korisnička ikona"
+                     class="avatar">
+            </div>
+
+            <img src="{{ url_for('static', filename='images/page_logo.png') }}"
+                 alt="Ikona pametne kuće"
+                 class="icon">
+
+        </header>
+      
+        <nav>
+
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <a href="/?id=1">Temperatura</a>
+            <a href="/?id=2">Vlaga</a>
+
+        </nav>
+
+        <!-- 6. ZADATAK: Sekcija s tablicom -->
+        <section>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Vrijeme</th>
+                        <th>Temperatura</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for temp in temperature %}
+                    <tr>
+                        <td>Datum1</td>
+                        <td>{{ temp }}</td>
+                        <td><button type="button">Obriši</button></td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3">Nema zapisa o temperaturi.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

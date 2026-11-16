@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+
+    /* Pozadinska slika usklađena s glavnom stranicom */
+    background-image: url('images/background.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 650px auto;
+
+    /* Centriranje forme na sredinu ekrana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartica s formom za prijavu */
+.login-card {
+    background-color: #CCCBCB;
+    border-top: 8px solid #64485C;
+    border-radius: 8px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.login-card h2 {
+    color: #64485C;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* Polja za unos */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #3A454D;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #64485C;
+}
+
+/* Gumb za prijavu */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3A454D;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2a333a;
+}

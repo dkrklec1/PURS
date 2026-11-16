@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ime i prezime">
+    <meta name="description" content="Stranica za prijavu u sustav.">
+    <title>Prijava u sustav</title>
+
+    <!-- Povezivanje novog CSS-a za login stranicu -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}?v=1">
+</head>
+<body>
+
+    <main class="login-card">
+        <h2>Prijava u sustav</h2>
+
+        <form action="{{ url_for('provjera_prijave') }}" method="POST">
+            <div class="input-group">
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" name="username" required autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Prijavi se</button>
+        </form>
+    </main>
+
+</body>
+</html>
